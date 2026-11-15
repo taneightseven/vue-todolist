@@ -6,10 +6,15 @@ import { RouterView } from 'vue-router'
 import { UiConfigProvider, UiGlobalStyle } from '@/ui'
 //导入主题覆盖配置
 import { themeOverrides } from '@/ui/theme'
+//电子木鱼
+import ClickPlay from '@/components/ClickPlay.vue'
+//跳转
+import LINK from '@/components/LINK.vue'
 </script>
 
 <template>
-  <!-- 用UiConfigProvider包住整个应用，让主题覆盖生效 -->
+  <LINK />
+  <ClickPlay />
   <UiConfigProvider :theme-overrides="themeOverrides">
     <!-- 根据当前URL渲染对应页面 -->
     <RouterView />

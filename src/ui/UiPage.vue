@@ -4,7 +4,7 @@ import { NLayout } from 'naive-ui'
 </script>
 
 <template>
-  <NLayout content-style="max-width: 640px; margin: 48px auto; padding: 0 16px;">
+  <NLayout content-style="max-width: 640px; margin: 24px auto 48px; padding: 0 16px;">
     <slot />
   </NLayout>
 </template>

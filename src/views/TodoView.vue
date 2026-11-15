@@ -176,3 +176,34 @@ function handleClearCompleted(): void {
     </UiCard>
   </UiPage>
 </template>
+
+<style scoped>
+/* 卡片：柔和圆角 + 分层阴影，让内容从浅灰背景中浮起来 */
+:deep(.n-card) {
+  border-color: rgba(31, 34, 37, 0.06);
+  border-radius: 18px;
+  box-shadow:
+    0 24px 60px -24px rgba(31, 34, 37, 0.18),
+    0 8px 20px -12px rgba(31, 34, 37, 0.08);
+}
+
+/* 标题：参考 TodoMVC 的细字重，使用主题红 */
+:deep(.n-h1) {
+  margin-bottom: 0;
+  color: #b83f45;
+  font-size: 42px;
+  font-weight: 200;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+@media (max-width: 640px) {
+  :deep(.n-card) {
+    border-radius: 14px;
+  }
+
+  :deep(.n-h1) {
+    font-size: 34px;
+  }
+}
+</style>
